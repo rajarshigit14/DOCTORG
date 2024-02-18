@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../static/output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    
+    <title>Home</title>
+    <style>
+        .slider-container {
+            overflow: hidden;
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+
+        }
+    </style>
+</head>
+<body class="bg-teal-100">
+    <nav class="bg-teal-900 py-8 px-4 flex">
+        <!-- <img src="/img/logo3.jpeg" alt="logo" width="100"> -->
+        <ul class=" text-white text-xl flex space-x-6 font-sans ml-4">
+        
+            <li class="text-white text-xl font-bold mr-8">DoctorG</li>
+            <li class="hover:font-semibold hover:cursor-pointer"><a href="#">Home</a></li>
+            <form action="/appointmentDate" >
+                <button id="ApptBook" class="btn hover:font-semibold hover:cursor-pointer"   type="submit" >Preferred Day Appointment</button>
+            </form>
+            <form action="/hospital" >
+                <button id="ApptBook" class="btn hover:font-semibold hover:cursor-pointer"   type="submit" >Hospitals</button>
+            </form>
+            <li class="hover:font-semibold hover:cursor-pointer"><a href="#about">About</a></li>
+            <li class="hover:font-semibold hover:cursor-pointer"><a href="#contact">Contact</a></li>
+        </ul>
+
+    </nav>
+
+    <!--Hero Section-->
+
+<div class="container flex px-10 py-24 bg-gradient-to-b from-teal-100 to-teal-400 ... mx-auto mt-12 h-max text-teal-700  border-teal-900 shadow-lg shadow-teal-500 rounded-md">
+    <div class="w-full relative">
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide flex justify-center items-center">
+                    <img src="{{url_for('static', filename='carousel1.jpg')}}" alt="Image 1" width="700" class="max-w-fit object-contain">
+                </div>
+                <div class="slide flex justify-center items-center">
+                    <img src="{{url_for('static', filename='carousel2.jpg')}}" alt="Image 2" width="700" class="max-w-fit object-cover">
+                </div>
+                <div class="slide flex justify-center items-center">
+                    <img src="{{url_for('static', filename='carousel3.jpg')}}" alt="Image 3" width="700" class="max-w-fit object-cover">
+                </div>
+               
+            </div>
+        </div>
+        <div class="flex justify-center py-2">
+            <button id="nextButton" class="fa-solid fa-arrow-left-long p-2 w-full"></button>
+            <button id="prevButton" class="fa-solid fa-arrow-right-long p-2 w-full"></button>
+        </div>
+        
+            <div class="flex justify-evenly items-center py-6">
+                <p class="font-sans font-bold text-5xl mx-10 px-10 py-6 text-gradient">Empowering and Elevating Your Healthcare Experience: AI-Driven Doctor Appointments</p>
+               
+            </div>
+            <div class="flex justify-center px-10 py-4 mx-10">
+                <form action="/appointment">
+                <button id="ApptBook"    type="submit" class="btn text-white bg-teal-900 hover:bg-white hover:text-teal-900 hover:scale-105 border-none border-teal-700 rounded-md px-10 py-4">Book an Appointment Now</button>
+                </form>
+            </div>
+    </div>
+</div>
+
+    <!--About Us-->
+
+    <div class="flex flex-col text-teal-700 bg-gradient-to-b from-teal-100 to-teal-400 ... bg-teal-500 container px-10 py-24 mx-auto mt-20 h-max items-center justify-center font-sans rounded-md shadow-lg shadow-teal-500" id="about">
+        <div class="flex flex-col items-center">
+            <h1 class="text-4xl font-bold py-6">About Us</h1>
+            <p class="text-xl py-6">Welcome to our AI-powered Doctor Appointment Website! We are passionate about revolutionizing healthcare accessibility and convenience for everyone. Our platform harnesses the cutting-edge capabilities of artificial intelligence to make the process of booking medical appointments easier and more efficient than ever before.</p>
+
+                <p class="text-xl py-6">At the heart of our platform is a commitment to putting your health and well-being first. Whether you're seeking routine check-ups, specialized consultations, or urgent care, we're here to streamline the entire appointment scheduling experience. Our AI-driven system intelligently matches your medical needs with the right healthcare providers, ensuring you receive the care you deserve promptly.
+                </p>
+
+                <p class="text-xl py-6">We understand that your time is valuable, which is why we prioritize simplicity and convenience. With just a few clicks, you will be alloted doctors' based on your urgency . No more waiting on hold or navigating complicated scheduling systems. We've made it effortless to take control of your health.</p>
+        </div>
+    </div>
+
+    <!--Contact Us-->
+    
+    <div class="bg-gradient-to-b from-teal-100 to-teal-400 ... text-teal-700 flex flex-col p-16 text-lg container px-10 py-24 mx-auto mt-20 h-max items-center justify-center font-sans rounded-md shadow-lg shadow-teal-500" id="contact">
+            <h2 class="text-4xl font-bold py-8 mb-8">Feel Free to Contact Us</h2>
+            <div class="flex justify-evenly text-2xl">
+                <div class="flex flex-col mx-10">
+                    <p class="font-semibold">Contact No:</p>
+                    <p>+91 9503783333 </p>
+                    <p>+91 9876543210</p>
+                </div>
+                <div class="flex flex-col mx-10">
+                    <p class="font-semibold">Email: </p>
+                    <p>doctorrrrG@gmail.com</p>
+                </div>
+                <div class="flex flex-col mx-10">
+                    <p class="font-semibold">Socials: </p>
+                    <a href="https://www.facebook.com" class="fab fa-facebook p-2"> DoctorG</a>
+                    <a href="https://www.linkedin.com" class="fab fa-linkedin p-2"> DoctorG</a>
+                </div>
+            </div>
+            <!-- Helpline no-->
+
+            <!--Mail id-->
+
+            <!--Social Media-->
+
+    </div>
+
+    <!--Footer-->
+    <div  class="flex flex-col text-teal-500 bg-teal-900 text-sm py-6 mx-auto h-max items-center justify-center font-sans" id="footer">
+        ©BYTE SCRAPERS All rights reserved 2023
+    </div>
+
+</body>
+
+<script>
+    // Get a reference to the button element
+    var redirectButton = document.getElementById("ApptBook");
+  
+    // Add a click event listener to the button
+    redirectButton.addEventListener("click", function() {
+      // Redirect to the new HTML file
+      window.location.href = "Appointment.html";
+    });
+
+    const prevButton = document.getElementById("prevButton");
+        const nextButton = document.getElementById("nextButton");
+        const slider = document.querySelector(".slider");
+        const slides = document.querySelectorAll(".slide");
+
+        let currentIndex = 0;
+        let interval;
+
+        function startAutoSlide() {
+            interval = setInterval(() => {
+                currentIndex = (currentIndex + 1) % slides.length;
+                updateSlider();
+            }, 3000); // Adjust the time interval (in milliseconds) for automatic sliding
+        }
+
+        function stopAutoSlide() {
+            clearInterval(interval);
+        }
+
+        prevButton.addEventListener("click", () => {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            updateSlider();
+            //stopAutoSlide(); // Stop automatic sliding on manual navigation
+        });
+
+        nextButton.addEventListener("click", () => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateSlider();
+           // stopAutoSlide(); // Stop automatic sliding on manual navigation
+        });
+
+        function updateSlider() {
+            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        // Start automatic sliding on page load
+        startAutoSlide();
+
+  </script>
+
+</html>
